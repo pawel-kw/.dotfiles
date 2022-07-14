@@ -59,7 +59,7 @@ echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
 #mv -iv ~/.gitconfig ~/.gitconfig.old
 mv -iv ~/.tmux.conf ~/.tmux.conf.old
 mv -iv ~/.vimrc ~/.vimrc.old
-#mv -iv ~/.zshrc ~/.zshrc.old
+mv -iv ~/.zshrc ~/.zshrc.old
 
 echo -e "\u001b[36;1mAdding symlinks...\u001b[0m"
 #ln -sfnv $PWD/.Xresources ~/.Xresources
@@ -71,7 +71,7 @@ echo -e "\u001b[36;1mAdding symlinks...\u001b[0m"
 #ln -sfnv $PWD/git/.gitconfig ~/.gitconfig
 ln -sfnv $PWD/tmux/.tmux/.tmux.conf ~/.tmux.conf
 ln -sfnv $PWD/vim/.vim/.vimrc ~/.vimrc
-#ln -sfnv $PWD/.zshrc ~/.zshrc
+ln -sfnv $PWD/zsh/.zshrc ~/.zshrc
 
 echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
 echo -e "\u001b[32;1m Completed. \u001b[0m"
