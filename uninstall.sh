@@ -59,7 +59,8 @@ echo -e "\u001b[33;1m Restoring from backups... \u001b[0m"
 #mv -iv ~/.gitconfig ~/.gitconfig.old
 rm ~/.tmux.conf
 rm ~/.vimrc
+rm ~/.zshrc
 mv -iv ~/.tmux.conf.old ~/.tmux.conf
 mv -iv ~/.vimrc.old ~/.vimrc
-#mv -iv ~/.zshrc ~/.zshrc.old
+mv -iv ~/.zshrc ~/.zshrc.old
 echo -e "\u001b[32;1m Completed. \u001b[0m"
