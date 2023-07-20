@@ -73,3 +73,7 @@ nnoremap <space> za
 
 "js stuff"
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+
+" Global settings:
+set shiftwidth=4 smarttab
+set expandtab
