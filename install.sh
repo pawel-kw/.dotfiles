@@ -72,6 +72,7 @@ echo -e "\u001b[36;1mAdding symlinks...\u001b[0m"
 ln -sfnv $PWD/tmux/.tmux/.tmux.conf ~/.tmux.conf
 ln -sfnv $PWD/vim/.vim/.vimrc ~/.vimrc
 ln -sfnv $PWD/zsh/.zshrc ~/.zshrc
+cp $PWD/tmux/.tmux/.tmux.conf.local ~/
 
 echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
 echo -e "\u001b[32;1m Completed. \u001b[0m"
