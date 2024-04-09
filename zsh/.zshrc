@@ -5,7 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="bira"
+ZSH_THEME="agnoster"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -53,3 +53,8 @@ eval "$(pyenv init -)"
 
 # pdfbox 
 alias pdfdebug="java -jar $HOME/Tools/pdfbox-app-3.0.0.jar debug"
+
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+eval $(thefuck --alias)
+
