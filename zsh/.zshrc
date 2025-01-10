@@ -42,10 +42,6 @@ up () {
 
 autoload -U +X bashcompinit && bashcompinit
 
-# mapbox
-export MAPBOX_ACCESS_TOKEN='pk.eyJ1IjoicGF3ZWxrdyIsImEiOiJjbGg2YmxiNnUwNGpqM2tzNjNjcm9mdXBvIn0.hZl4qhOX9rpc12EPTbXEBA'
-alias glintlp='/Users/pawelkwasniewski/git/glint-layer-processor/glint_layer_processor.sh'
-
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -58,3 +54,5 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 eval $(thefuck --alias)
 
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
