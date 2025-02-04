@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -15,8 +17,7 @@ ZSH_THEME="agnoster"
 plugins=(
 git
 macos
-lpass
-poetry
+pyenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -42,17 +43,27 @@ up () {
 
 autoload -U +X bashcompinit && bashcompinit
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# pdfbox 
-alias pdfdebug="java -jar $HOME/Tools/pdfbox-app-3.0.0.jar debug"
-
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
-eval $(thefuck --alias)
+# Read secrets if present
+if [ -f ~/.zsh_secrets ]; then
+        source ~/.zsh_secrets
+fi
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
+# DBT
+export DBT_PACKAGE_HUB_URL="https://nexus.tech.dnb.no/nexus/repository/ipa-dbt/"
+
+# SSH
+eval "$(ssh-agent -s)"
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+ssh-add --apple-use-keychain ~/.ssh/id_rsa_snowflake.p8
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# the fuck
+eval $(thefuck --alias)
