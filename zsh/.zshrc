@@ -67,3 +67,6 @@ eval "$(pyenv init - zsh)"
 
 # the fuck
 eval $(thefuck --alias)
+
+# dbt helpers
+alias godocs="dbt docs generate; dbt docs serve"
