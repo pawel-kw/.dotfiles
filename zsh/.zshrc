@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/Library/Application Support/teradata/client/20.00/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,3 +70,15 @@ eval $(thefuck --alias)
 
 # dbt helpers
 alias godocs="dbt docs generate; dbt docs serve"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Added by dbt installer
+export PATH="$PATH:/Users/pawelkwasniewski/.local/bin"
+
+# dbt aliases
+alias dbtf=/Users/pawelkwasniewski/.local/bin/dbt
+
+export NODE_EXTRA_CA_CERTS=/Users/pawelkwasniewski/.raicode/dnb-zscaler.pem
