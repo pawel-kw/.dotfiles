@@ -59,6 +59,8 @@ Removes only the symlinks (your $HOME-side plugin caches at
 
 ## Neovim — what's included
 
+See [docs/nvim-cheatsheet.md](docs/nvim-cheatsheet.md) for keymaps and a typical session.
+
 - **lazy.nvim** for plugin mgmt, **mason** for LSP/formatter installation
 - **Treesitter** parsers for sql, python, terraform, hcl, yaml, json, jinja, …
 - **LSP**: basedpyright, ruff, terraformls, yamlls (+ SchemaStore), jsonls, sqlls,
