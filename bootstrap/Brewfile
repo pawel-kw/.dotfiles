@@ -1,0 +1,29 @@
+# Brewfile — macOS package set for the dotfiles.
+# Apply with: brew bundle --file=bootstrap/Brewfile
+
+# Core CLI
+brew "stow"
+brew "ripgrep"
+brew "fd"
+brew "fzf"
+brew "tmux"
+brew "neovim"
+brew "lazygit"
+brew "node"           # required by some LSPs (yamlls, jsonls, bashls, dockerls)
+brew "tree"
+brew "thefuck"
+
+# Data engineering toolchain
+brew "uv"             # fast Python venv/pip alternative
+brew "pyenv"          # Python version mgmt for legacy repos
+brew "terraform"      # or `brew "tfenv"` if you prefer pinned versions
+brew "tflint"
+brew "sqlfluff"       # SQL/dbt linter+formatter
+brew "pre-commit"
+
+# Terminal + fonts
+cask "wezterm"
+cask "font-jetbrains-mono-nerd-font"
+
+# Optional Snowflake CLI (uncomment if you want it system-wide instead of via uv)
+# cask "snowflake-snowsql"
