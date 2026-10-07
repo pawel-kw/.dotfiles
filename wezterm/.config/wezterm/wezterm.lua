@@ -13,7 +13,7 @@ config.font = wezterm.font_with_fallback({
 config.font_size = 14.0
 config.harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1' } -- ligatures on
 config.line_height = 1.05
-config.window_decorations = 'RESIZE'
+config.window_decorations = 'TITLE | RESIZE'
 config.window_padding = { left = 8, right = 8, top = 6, bottom = 6 }
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
@@ -47,7 +47,7 @@ config.keys = {
 -- ---- Per-OS tweaks -------------------------------------------------------
 if wezterm.target_triple:find('darwin') then
   config.macos_window_background_blur = 20
-  config.window_background_opacity = 0.97
+  config.window_background_opacity = 0.9
 end
 
 return config
