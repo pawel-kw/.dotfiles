@@ -58,12 +58,16 @@ export DBT_PACKAGE_HUB_URL="https://nexus.tech.dnb.no/nexus/repository/ipa-dbt/"
 # SSH
 eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519_2026
 ssh-add --apple-use-keychain ~/.ssh/id_rsa_snowflake.p8
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+
+# OneDrive
+export ONEDRIVE="$HOME/Library/CloudStorage/OneDrive-DNBBankASA"
 
 # the fuck
 eval $(thefuck --alias)

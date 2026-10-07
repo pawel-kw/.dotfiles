@@ -1,0 +1,20 @@
+# Linux (Debian/Ubuntu) package list.
+# Apply with: sudo apt update && xargs -a bootstrap/packages-linux.txt sudo apt install -y
+# Some tools (neovim >= 0.10, lazygit, sqlfluff, uv) need extra repos or a separate
+# install path — see bootstrap.sh for the Linux flow.
+
+stow
+ripgrep
+fd-find
+fzf
+tmux
+build-essential
+curl
+git
+unzip
+nodejs
+npm
+python3
+python3-venv
+python3-pip
+tree

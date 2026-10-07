@@ -1,0 +1,5 @@
+# Stow ignores for the tmux package.
+# .tmux.conf.local is the user-editable override file in gpakosz tmux.
+# bootstrap.sh copies it once into $HOME on first install instead of symlinking
+# so local tweaks don't bleed back into the repo.
+\.tmux\.conf\.local

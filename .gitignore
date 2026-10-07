@@ -1,0 +1,12 @@
+# Neovim runtime (managed by lazy.nvim, not by this repo)
+nvim/.config/nvim/plugin/
+nvim/.config/nvim/.luarc.json
+# Keep lazy-lock.json tracked so plugin versions are reproducible across machines.
+
+# Editor / OS noise
+.DS_Store
+*.swp
+*.swo
+
+# Local secrets
+.zsh_secrets
